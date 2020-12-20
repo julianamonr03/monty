@@ -1,4 +1,4 @@
-<div align="center"><img src="monty.gif" width="800" height="500"/>
+<div align="center"><img src="images/monty.gif" width="800" height="500"/>
 
 
 ## Authors
