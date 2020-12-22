@@ -58,4 +58,7 @@ void mul(stack_t **head, unsigned int counter);
 /* Selector structure */
 void select_func(stack_t **head, char *token, unsigned int counter);
 
+/* Free memory */
+void free_all(stack_t **head);
+
 #endif /* _MONTY_HOL */
