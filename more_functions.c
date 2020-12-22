@@ -29,7 +29,9 @@ void swap(stack_t **head, unsigned int counter)
  * @counter: Number of the line
  * Return: Void - Nothing
  **/
-void nop(stack_t **head __attribute__((unused)), unsigned int counter)
+void nop(stack_t **head, unsigned int counter)
 {
+	/* Attribute unused*/
+	(void) head;
 	(void) counter;
 }
