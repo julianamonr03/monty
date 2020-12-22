@@ -9,7 +9,48 @@
 
 void push(stack_t **head, unsigned int counter)
 {
-	stack_t *new_n = NULL;
+	stack_t *new_node = NULL;
+	int cont = 0;
+	char *verify = strtok(NULL, LIMITER);
+
+	/* if <int> is not an integer or if there is no argument given to push */
+	if (!verify)
+	{
+		fprintf(stderr, "L%u: usage: push integer\n", counter);
+		exit(EXIT_FAILURE);
+	}
+
+	while (verify[cont] != '\0')
+	{
+		if (!isdigit(verify[cont]))
+		{
+			fprintf(stderr, "L%u: usage: push integer\n", counter);
+			exit(EXIT_FAILURE);
+		}
+		cont++;
+	}
+	new_node = malloc(sizeof(stack_t));
+
+	if (new_node == NULL)
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
+	}
+
+	new_node->n = atoi(verify);
+	new_node->prev = NULL;
+
+	if (*head)
+	{
+		new_node->next = (*head);
+		(*head)->prev = new_node;
+		(*head) = new_node;
+	}
+	else
+	{
+		(*head) = new_node;
+		new_node->next = NULL;
+	}
 }
 
 /**
