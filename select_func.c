@@ -19,12 +19,13 @@ void select_func(stack_t **head, char *token, unsigned int counter)
 		{"pop", pop},
 		{"sub", sub},
 		{"mul", mul},
+		{"div", _div},
 		{NULL, NULL}
 	};
 
 	int travel = 0;
 
-	while (travel < 9)
+	while (travel < 10)
 	{
 		if (strcmp(selector[travel].opcode, token) == 0)
 		{
