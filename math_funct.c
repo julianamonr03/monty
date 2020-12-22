@@ -66,3 +66,30 @@ void mul(stack_t **head, unsigned int counter)
 	free((*head)->prev);
 	(*head)->prev = NULL;
 }
+
+/**
+ * _div - This function subtracts the top element of the stack from
+ * the second top element of the stack.
+ * @head: The head of the Stack.
+ * @counter: Number of the line.
+ * Return: Void - Nothing.
+ **/
+void _div(stack_t **head, unsigned int counter)
+{
+	if (!head || !(*head) || !(*head)->next)
+	{
+		fprintf(stderr, "L%u: can't div, stack too short\n", counter);
+		exit(EXIT_FAILURE);
+	}
+
+	if ((*head)->n == 0)
+	{
+		fprintf(stderr, "L%u: division by zero\n", counter);
+		exit(EXIT_FAILURE);
+	}
+
+	(*head)->next->n /= (*head)->n;
+	(*head) = (*head)->next;
+	free((*head)->prev);
+	(*head)->prev = NULL;
+}
