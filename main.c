@@ -40,6 +40,9 @@ int main(int argc, char *argv[])
 			continue;
 
 	}
+	if (lineptr)
+		free(lineptr);
+	free_all(&head);
     fclose(fl);
 	exit(EXIT_SUCCESS);
 }
