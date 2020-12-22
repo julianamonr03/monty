@@ -43,6 +43,6 @@ int main(int argc, char *argv[])
 	if (lineptr)
 		free(lineptr);
 	free_all(&head);
-    fclose(fl);
+	fclose(fl);
 	exit(EXIT_SUCCESS);
 }
