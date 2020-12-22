@@ -21,7 +21,7 @@ void push(stack_t **head, unsigned int counter)
 
 	while (verify[cont] != '\0')
 	{
-		if (!isdigit(verify[cont]))
+		if (!isdigit(verify[cont]) && verify[cont] != '-')
 		{
 			fprintf(stderr, "L%u: usage: push integer\n", counter);
 			exit(EXIT_FAILURE);
