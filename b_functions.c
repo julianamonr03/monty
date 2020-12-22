@@ -13,8 +13,7 @@ void push(stack_t **head, unsigned int counter)
 	int cont = 0;
 	char *verify = strtok(NULL, LIMITER);
 
-	/* if <int> is not an integer or if there is no argument given to push */
-	if (!verify)
+	if (!verify)/* if <int> is not an int or if no argument given to push */
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", counter);
 		exit(EXIT_FAILURE);
@@ -30,7 +29,6 @@ void push(stack_t **head, unsigned int counter)
 		cont++;
 	}
 	new_node = malloc(sizeof(stack_t));
-
 	if (new_node == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
