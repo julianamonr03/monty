@@ -5,14 +5,11 @@
 Monty 0.98 is a scripting language that is first compiled into Monty byte codes (Just like Python). It relies on a unique stack, with specific instructions to manipulate it. The goal of this project is to create an interpreter for Monty ByteCodes files.
 
 
-<div align="center">
-
 # Resources
 
 - [How do I use extern to share variables between source files in C?](https://stackoverflow.com/questions/1433204/how-do-i-use-extern-to-share-variables-between-source-files)
 
 -----
-
 # General
 
 * What do LIFO and FIFO mean
@@ -26,6 +23,7 @@ Monty 0.98 is a scripting language that is first compiled into Monty byte codes 
 # How to use it
 
  Clone this repo into your VM or OS with https://github.com/julianamonr03/monty
+
 > Compiler to use: `GCC version 4.8.4 (Ubuntu 4.8.4-2ubuntu1~14.04.4)`
 
 > gcc -Wall -Werror -Wextra -pedantic *.c -o monty
@@ -33,6 +31,9 @@ Monty 0.98 is a scripting language that is first compiled into Monty byte codes 
 Run: `./monty [monty_type_file]`
 
 -----
+
+<div align="center">
+
 ## Authors
 
 
