@@ -34,4 +34,9 @@ void select_func(stack_t **head, char *token, unsigned int counter)
 		}
 		travel++;
 	}
+	if (token[0] != '#')
+	{
+		fprintf(stderr, "L%u: unknown instruction %s\n", counter, token);
+		exit(EXIT_FAILURE);
+	}
 }
