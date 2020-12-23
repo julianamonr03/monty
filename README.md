@@ -12,12 +12,23 @@ Monty 0.98 is a scripting language that is first compiled into Monty byte codes 
 - [How do I use extern to share variables between source files in C?](https://stackoverflow.com/questions/1433204/how-do-i-use-extern-to-share-variables-between-source-files)
 
 -----
+
+# General
+
+* What do LIFO and FIFO mean
+* What is a stack, and when to use it
+* What is a queue, and when to use it
+* What are the common implementations of stacks and queues
+* What are the most common use cases of stacks and queues
+* What is the proper way to use global variables
+
+-----
 # How to use it
 
-- Clone this repo into your VM or OS with https://github.com/julianamonr03/monty
-- Compiler to use: `GCC version 4.8.4 (Ubuntu 4.8.4-2ubuntu1~14.04.4)`
+ Clone this repo into your VM or OS with https://github.com/julianamonr03/monty
+> Compiler to use: `GCC version 4.8.4 (Ubuntu 4.8.4-2ubuntu1~14.04.4)`
 
-gcc -Wall -Werror -Wextra -pedantic *.c -o monty
+> gcc -Wall -Werror -Wextra -pedantic *.c -o monty
 
 Run: `./monty [monty_type_file]`
 
